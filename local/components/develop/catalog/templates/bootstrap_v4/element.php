@@ -219,7 +219,7 @@ $isSidebarLeft = isset($arParams['SIDEBAR_SECTION_POSITION']) && $arParams['SIDE
 			$componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
 		}
 
-		$elementId = $APPLICATION->IncludeComponent('bitrix:catalog.element', 'bootstrap_v4', $componentElementParams,
+		$elementId = $APPLICATION->IncludeComponent('develop:catalog.element', 'bootstrap_v4', $componentElementParams,
 			$component
 		);
 

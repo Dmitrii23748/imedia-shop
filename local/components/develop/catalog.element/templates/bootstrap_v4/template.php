@@ -3,7 +3,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Catalog\ProductTable;
-
+use Bitrix\Sale;
 
 /**
  * @global CMain $APPLICATION
@@ -669,13 +669,35 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 								<div class="mb-3" id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>" style="display: <?= (!$actualItem['CAN_BUY'] ? '' : 'none') ?>;">
 									<a class="btn btn-primary product-item-detail-buy-button" href="javascript:void(0)" rel="nofollow"><?= $arParams['MESS_NOT_AVAILABLE'] ?></a>
 								</div>
-						<?php
+
+
+					<?php
 								break;
 						}
 					}
 
+					?>
+					<!-- ////////////////////////////////////////////// КОДДДДДДДДДДДДД -->
+					<!-- ////////////////////////////////////////////// ОТРАБАТЫВАЕТ НЕ ПОСТОЯННО!!! НАДО ПОДУМАТЬ!!!! -->а
+
+					<?php
+
+					$basket = Sale\Basket::loadItemsForFUser(Sale\Fuser::getId(), Bitrix\Main\Context::getCurrent()->getSite());
+					$basketItems = $basket->getBasketItems();
+
+					foreach ($basket as $basketItem) {
+						if ($basketItem->getField('NAME') == $arResult['NAME']) {
+					?>
+							<a href="http://imedia-shop/personal/order/make/">Товар уже в корзине. Осталось только оформить заказ!</a>
+					<?php
+						}
+					}
+					?>
+
+					<?php
+
 					if ($arParams['DISPLAY_COMPARE']) {
-						?>
+					?>
 						<div class="product-item-detail-compare-container">
 							<div class="product-item-detail-compare">
 								<div class="checkbox">
