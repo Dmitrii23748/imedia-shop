@@ -22,7 +22,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
@@ -80,7 +80,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 			1 => "PREVIEW_PICTURE",
 			2 => "DETAIL_PICTURE",
 			3 => "",
-			4 => "",
 		),
 		"LIST_OFFERS_PROPERTY_CODE" => array(
 			0 => "ARTNUMBER",
