@@ -677,9 +677,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 					}
 
 					?>
-					<!-- ////////////////////////////////////////////// КОДДДДДДДДДДДДД -->
-					<!-- ////////////////////////////////////////////// ОТРАБАТЫВАЕТ НЕ ПОСТОЯННО!!! НАДО ПОДУМАТЬ!!!! -->а
-
+			
 					<?php
 
 					$basket = Sale\Basket::loadItemsForFUser(Sale\Fuser::getId(), Bitrix\Main\Context::getCurrent()->getSite());

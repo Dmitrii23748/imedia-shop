@@ -36,7 +36,7 @@ $arUrlRewrite=array (
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
-    'ID' => 'bitrix:catalog',
+    'ID' => 'develop:catalog',
     'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
