@@ -29,13 +29,14 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 	</div>
 <?endif?>
 
+
 <?
 global $trendFilter;
 $trendFilter = array('PROPERTY_TREND' => '4');
 ?>
 <h2>Тренды сезона</h2>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section",
+	"develop:catalog.section",
 	"bootstrap_v4",
 	array(
 		"IBLOCK_TYPE_ID" => "catalog",
