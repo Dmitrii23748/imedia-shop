@@ -8,11 +8,9 @@
 $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
 
-
 foreach ($arResult["ITEMS"] as $key => $arItem) {
     var_dump($arItem["PROPERTIES"]["MORE_PHOTO"]);
-};
+}
+//  Что делать дальше не понятно!!!!!!!!!!!!!!!!!!!!!
 
-
-
-// var_dump($arItem["PROPERTIES"]["MORE_PHOTO"]["VALUE"]);
+// var_dump($arItem["PROPERTIES"]["MORE_PHOTO"]);
